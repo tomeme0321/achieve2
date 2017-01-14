@@ -46,7 +46,7 @@ group :development, :test do
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
-
+  gem 'better_errors'
 end
 
 gem 'rails_12factor', group: :production
@@ -54,6 +54,16 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 gem 'devise'
 gem 'faker'
+
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
+gem 'rails_admin'
+gem 'cancan'
+gem 'activeresource'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'rmagick'
