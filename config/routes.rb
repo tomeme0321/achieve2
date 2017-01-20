@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   resources :contacts, only:[:index, :new, :create] do
@@ -6,7 +7,9 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  resources :blogs, only:[:index, :new, :create, :edit, :update, :destroy] do
+  resources :blogs do
+    resources :comments
+
     collection do
       post :confirm
     end
