@@ -4,9 +4,9 @@
       <%= link_to "ブログを作成する", new_blog_path, class: 'btn btn-default' %>
     <% @blogs.reverse_each do |blog| %>
      <div class="row">
-      <%= link_to blog_path(blog) do %>
         <%= profile_img(blog.user) %>
         <p><%= blog.user.name %>が投稿しました。</p>
+        <%= link_to blog_path(blog) do %>
         <h4><strong><%= blog.title %></strong></h4>
       <% end %>
         <p><%= blog.content %></p>
