@@ -6,6 +6,8 @@
     <%= profile_img(user) %>
     <strong><%= user.name %></strong>
     <% end %>
+    <br>
+    <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
     <%= render 'follow_form', user: user %>
   </div>
   <% end %>
