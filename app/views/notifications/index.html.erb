@@ -3,7 +3,9 @@
   <% @notifications.each do |notification| %>
   <hr>
   <li>
-    <span><%= notification.read %></span>
+    <% unless notification.read == "true" %>
+    <span><%= notification.read = "既読済み"%></span>
+    <% end %>
     <p>
       <%= notification.comment.user.try(:name) %>さんが
       あなたのブログ（<%= link_to "#{notification.comment.blog.title}", blog_path(notification.comment.blog, notification_id: notification.id) %>）にコメントしました。
